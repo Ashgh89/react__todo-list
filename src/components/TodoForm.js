@@ -11,7 +11,7 @@ const TodoForm = (props) => {
     // Add entered todo to todos
     if (!input) {
       alert("enter todo!");
-      // The function will stop executing when the return statement is called.
+      //function will stop executing when return statement is called.
       return;
     }
     props.addTodoHandler(input);
