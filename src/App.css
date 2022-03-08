@@ -27,3 +27,8 @@
   width: 10rem;
   margin: 10px;
 }
+
+.completed {
+  text-decoration: line-through;
+  color: #f08585;
+}
