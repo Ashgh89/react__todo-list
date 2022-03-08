@@ -16,10 +16,15 @@ const TodoApp = () => {
     setTodos([...todos, newTodo]);
   };
 
+  const completeToDo = (id) => {
+    const index = todos.findIndex((todo) => todo.id === id);
+    console.log(index);
+  };
+
   return (
     <div className="container">
       <TodoForm addTodoHandler={addTodoHandler} />
-      <TodoList todos={todos} />
+      <TodoList todos={todos} onComplete={completeToDo} />
     </div>
   );
 };
