@@ -17,8 +17,10 @@ const TodoApp = () => {
   };
 
   const completeToDo = (id) => {
+    // Watch Video No.81
+    // You must learn it (AUSWÄNDIG)
     const index = todos.findIndex((todo) => todo.id === id);
-    console.log(index);
+    // console.log(index); // OUTPUT -> 0 or 1 or 2 and so on
     const selectedTodo = { ...todos[index] };
     selectedTodo.isCompleted = !selectedTodo.isCompleted;
     const updatedTodos = [...todos];
