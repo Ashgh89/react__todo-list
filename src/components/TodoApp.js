@@ -31,6 +31,7 @@ const TodoApp = () => {
   const removeToDo = (id) => {
     console.log(id);
     const filteredTodos = todos.filter((t) => t.id !== id);
+    setTodos(filteredTodos);
   };
 
   return (
