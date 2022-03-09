@@ -28,10 +28,14 @@ const TodoApp = () => {
     setTodos(updatedTodos);
   };
 
+  const removeToDo = (id) => {
+    console.log(id);
+  };
+
   return (
     <div className="container">
       <TodoForm addTodoHandler={addTodoHandler} />
-      <TodoList todos={todos} onComplete={completeToDo} />
+      <TodoList todos={todos} onComplete={completeToDo} onDelete={removeToDo} />
     </div>
   );
 };
