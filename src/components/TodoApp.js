@@ -35,7 +35,7 @@ const TodoApp = () => {
   };
 
   return (
-    <div className="containe">
+    <div className="container">
       <TodoForm addTodoHandler={addTodoHandler} />
       <TodoList todos={todos} onComplete={completeToDo} onDelete={removeToDo} />
     </div>
