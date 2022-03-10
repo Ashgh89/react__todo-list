@@ -1,7 +1,11 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 
 const TodoForm = (props) => {
   const [input, setInput] = useState("");
+  const inputRef = useRef(null);
+  useEffect(() => {
+    inputRef.current.focus();
+  }, []);
   const changeHandler = (e) => {
     setInput(e.target.value);
   };
@@ -26,12 +30,19 @@ const TodoForm = (props) => {
             value={input}
             onChange={changeHandler}
             placeholder="add todo..."
+            ref={inputRef}
           />
           <button>Update</button>
         </>
       ) : (
         <>
-          <input type="text" value={input} onChange={changeHandler} />
+          <input
+            type="text"
+            value={input}
+            onChange={changeHandler}
+            placeholder="update todo..."
+            ref={inputRef}
+          />
           <button>Add</button>
         </>
       )}
