@@ -11,7 +11,7 @@ const TodoList = ({ todos, onComplete, onDelete, onUpdate }) => {
   };
 
   const renderTodos = () => {
-    if (todos.length === 0) return <p>add somefüsfdsdf todos</p>;
+    if (todos.length === 0) return <p>add some todos</p>;
 
     return todos.map((todo) => {
       return (
