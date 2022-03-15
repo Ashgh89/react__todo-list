@@ -15,9 +15,10 @@
   flex-direction: column;
   align-items: center;
   width: 40rem;
-  background-color: #fff;
-  border: 1px solid #ccc;
+  background-color: #a382d655;
+  border: 10px solid #78609e;
   border-radius: 5px;
+  padding-top: 20px;
 }
 
 .todo {
@@ -74,5 +75,5 @@ input:focus {
 }
 
 .updateTodo {
-  background-color: #a27be0;
+  background-color: #cec7d8;
 }
