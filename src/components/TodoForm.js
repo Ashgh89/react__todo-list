@@ -22,30 +22,16 @@ const TodoForm = (props) => {
     setInput("");
   };
   return (
+    // Let'S refactoring and do it dynamic
     <form onSubmit={submitHandler}>
-      {props.edit ? (
-        <>
-          <input
-            type="text"
-            value={input}
-            onChange={changeHandler}
-            placeholder="add todo..."
-            ref={inputRef}
-          />
-          <button>Update</button>
-        </>
-      ) : (
-        <>
-          <input
-            type="text"
-            value={input}
-            onChange={changeHandler}
-            placeholder="update todo..."
-            ref={inputRef}
-          />
-          <button>Add</button>
-        </>
-      )}
+      <input
+        type="text"
+        value={input}
+        onChange={changeHandler}
+        placeholder="update todo..."
+        ref={inputRef}
+      />
+      <button>Add</button>
     </form>
   );
 };
