@@ -31,7 +31,7 @@ const TodoForm = (props) => {
         placeholder={props.edit ? "update value..." : "add new todos..."}
         ref={inputRef}
       />
-      <button>Add</button>
+      <button type="submit">{props.edit ? "Update" : "Add"}</button>
     </form>
   );
 };
