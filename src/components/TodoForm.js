@@ -24,14 +24,16 @@ const TodoForm = (props) => {
   return (
     // Let'S refactoring and do it dynamic
     <form onSubmit={submitHandler}>
-      <input
-        type="text"
-        value={input}
-        onChange={changeHandler}
-        placeholder={props.edit ? "update value..." : "add new todos..."}
-        ref={inputRef}
-      />
-      <button type="submit">{props.edit ? "Update" : "Add"}</button>
+      <div className="formControl">
+        <input
+          type="text"
+          value={input}
+          onChange={changeHandler}
+          placeholder={props.edit ? "update value..." : "add new todos..."}
+          ref={inputRef}
+        />
+        <button type="submit">{props.edit ? "Update" : "Add"}</button>
+      </div>
     </form>
   );
 };
