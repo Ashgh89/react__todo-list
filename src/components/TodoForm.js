@@ -28,7 +28,7 @@ const TodoForm = (props) => {
         type="text"
         value={input}
         onChange={changeHandler}
-        placeholder="update todo..."
+        placeholder={props.edit ? "update value..." : "add new todos..."}
         ref={inputRef}
       />
       <button>Add</button>
