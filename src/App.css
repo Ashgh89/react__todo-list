@@ -83,6 +83,7 @@ input:focus {
 
 header {
   display: flex;
+
   align-items: center;
 }
 
