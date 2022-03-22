@@ -1,9 +1,10 @@
 import { useState } from "react";
 
-const NavBar = ({ unCompletedTodos }) => {
+const NavBar = ({ unCompletedTodos, filterTodos }) => {
   const [status, setStatus] = useState("All");
   const changeHandler = (e) => {
     setStatus(e.target.value);
+    filterTodos(e.target.value);
   };
   if (!unCompletedTodos) return <h2>set your today todos!</h2>;
   return (
