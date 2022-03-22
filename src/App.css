@@ -28,7 +28,9 @@
   width: 20rem;
   margin: 10px;
 }
-
+.todoText {
+  cursor: pointer;
+}
 .completed {
   text-decoration: line-through;
   color: #f08585;
