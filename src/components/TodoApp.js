@@ -67,11 +67,20 @@ const TodoApp = () => {
         setFilterTodos(todos);
     }
   };
+
+  const changeHandler = (e) => {
+    setStatus(e.target.value);
+    filterTodos(e.target.value);
+
+    setStatus = { setStatus };
+  };
   return (
     <div className="container">
       <NavBar
         unCompletedTodos={todos.filter((t) => !t.isCompleted).length}
-        filterTodos={filterTodos}
+        // filterTodos={filterTodos}
+        onSelect={changeHandler}
+        status={status}
       />
       <TodoForm addTodoHandler={addTodoHandler} />
       <TodoList
