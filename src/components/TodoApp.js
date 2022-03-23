@@ -47,6 +47,20 @@ const TodoApp = () => {
 
   const filterTodos = (status) => {
     console.log(status);
+    switch (status) {
+      // I think it is better when we give our All to the default. (Less Codes)
+      // case "All":
+      //   setFilterTodos(todos);
+      //   break;
+      case "Completed":
+        setFilterTodos(todos.filter((t) => t.isCompleted));
+        break;
+      case "Uncompleted":
+        setFilterTodos(todos.filter((t) => !t.isCompleted));
+        break;
+      default:
+        setFilterTodos(todos);
+    }
   };
   return (
     <div className="container">
