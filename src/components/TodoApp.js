@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import NavBar from "./NavBar";
 import TodoForm from "./TodoForm";
 import TodoList from "./TodoList";
@@ -6,6 +6,11 @@ import TodoList from "./TodoList";
 const TodoApp = () => {
   const [todos, setTodos] = useState([]);
   const [filteredTodos, setFilterTodos] = useState([]);
+  const [status, setStatus] = useState("All");
+
+  useEffect(() => {
+    filterTodos(status);
+  }, [todos, status]);
 
   // todos
   const addTodoHandler = (input) => {
@@ -70,7 +75,7 @@ const TodoApp = () => {
       />
       <TodoForm addTodoHandler={addTodoHandler} />
       <TodoList
-        todos={todos}
+        todos={/*todos*/ filteredTodos}
         onComplete={completeToDo}
         onDelete={removeToDo}
         onUpdate={updateToDo}

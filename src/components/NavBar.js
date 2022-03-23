@@ -1,7 +1,7 @@
 import { useState } from "react";
 
-const NavBar = ({ unCompletedTodos, filterTodos }) => {
-  const [status, setStatus] = useState("All");
+const NavBar = ({ unCompletedTodos, filterTodos, status, setStatus }) => {
+  // const [status, setStatus] = useState("All");
   const changeHandler = (e) => {
     setStatus(e.target.value);
     filterTodos(e.target.value);
