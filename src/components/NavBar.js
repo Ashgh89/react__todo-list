@@ -1,5 +1,3 @@
-import { useState } from "react";
-
 const NavBar = ({ unCompletedTodos, onSelect, status }) => {
   // const [status, setStatus] = useState("All");
   // const changeHandler = (e) => {
@@ -20,6 +18,3 @@ const NavBar = ({ unCompletedTodos, onSelect, status }) => {
 };
 
 export default NavBar;
-// LET'S REFACTOR THIS
-
-// NOW LETS'S GIVE IT SELECT OPTION

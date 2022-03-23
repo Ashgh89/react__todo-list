@@ -71,8 +71,6 @@ const TodoApp = () => {
   const changeHandler = (e) => {
     setStatus(e.target.value);
     filterTodos(e.target.value);
-
-    setStatus = { setStatus };
   };
   return (
     <div className="container">
